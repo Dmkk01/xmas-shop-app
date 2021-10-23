@@ -2,7 +2,7 @@ import { createContext, useContext} from 'react';
 import { useState, useMemo, useEffect } from 'react';
 import axios from 'axios';
 
-export const MyContext = createContext(null);
+export const MyContext = createContext([]);
 
 const initialState = [
     {
@@ -34,7 +34,7 @@ const initialState = [
 ]
 
 export function MyProvider({ children }) {
-    const [state, setState] = useState(null);
+    const [state, setState] = useState([]);
 
     const value = useMemo(() => ({ state, setState }), [state, setState]);
 
@@ -67,3 +67,7 @@ export function MyProvider({ children }) {
         </MyContext.Provider>
     );
 }
+
+export function useAppContext() {
+    return useContext(MyContext);
+  }

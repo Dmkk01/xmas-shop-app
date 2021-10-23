@@ -1,0 +1,55 @@
+@import "utilities";
+
+.card {
+    width: 25vw;
+    max-height: 350px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba($dark, .5);
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-template-rows: 1fr 2fr 1fr 5fr 2fr;
+    grid-template-areas: "image category"
+                         "image title"
+                         "image price"
+                         "image description"
+                         "select discard";
+
+    .image {
+        grid-area: image;
+        padding: 30px;
+    }
+
+    .category {
+        grid-area: category;
+        font-size: 14px;
+        color: $primary-color;
+    }
+
+    .title {
+        grid-area: title;
+        font-size: 20px;
+        color: $dark;
+    }
+
+    .price {
+        grid-area: price;
+        font-size: 25px;
+        color: $primary-color;
+        font-weight: bold;
+    }
+
+    .description {
+        grid-area: description;
+        font-size: 14px;
+        color: $dark;
+    }
+
+    .select {
+        grid-area: select;
+    }
+
+    .discard {
+        grid-area: discard;
+    }
+    
+}

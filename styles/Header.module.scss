@@ -1,0 +1,18 @@
+@import "utilities";
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  text-align: center;
+  a {
+    &:hover, &:focus, &:active {
+      text-decoration: underline;
+    }
+  }
+
+  a, span {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
