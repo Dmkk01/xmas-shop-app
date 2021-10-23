@@ -1,34 +1,95 @@
 @import "utilities";
 
 .card {
-    width: 25vw;
-    max-height: 350px;
+    position: relative;
+    width: 27vw;
+    height: 300px;
     border-radius: 20px;
     box-shadow: 5px 5px 15px rgba($dark, .5);
     display: grid;
-    grid-template-columns: 3fr 4fr;
-    grid-template-rows: 1fr 2fr 1fr 5fr 2fr;
+    padding: 15px 0;
+    padding-right: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 6fr 1fr;
     grid-template-areas: "image category"
                          "image title"
                          "image price"
                          "image description"
                          "select discard";
 
+    @include w1400 {
+        height: 370px;
+        grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
+        grid-template-areas: "image category"
+                             "image title"
+                             "image price"
+                             "description description"
+                             "select discard";
+    }
+
+    
+    @include w1000 {
+        width: 80%;
+        margin: 20px 0;
+        align-items: center;
+        justify-items: center;
+        padding-right: 0;
+        height: 350px;
+    }
+
+    @include w600 {
+        width: 85vw;
+        height: 450px;
+        grid-template-columns: 42vw 42vw;
+        grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
+        grid-template-areas: "image category"
+                             "image price"
+                             "title title"
+                             "description description"
+                             "select discard";
+    }
+    &:hover {
+        box-shadow: 5px 5px 15px rgba($primary-color, .5);
+    }
+
     .image {
         grid-area: image;
         padding: 30px;
+
+        img {
+            width: 8vw;
+
+            @include w1000 {
+                width: 15vw;
+            }
+        }
     }
 
     .category {
         grid-area: category;
         font-size: 14px;
         color: $primary-color;
+
+        @include w1000 {
+            font-size: 20px;
+        }
     }
 
     .title {
         grid-area: title;
-        font-size: 20px;
+        font-size: 15px;
         color: $dark;
+
+        @include w1000 {
+            font-size: 22px;
+        }
+
+        @include w600 {
+            font-size: 20px;
+            margin: 0 20px;
+            text-align: center;
+            font-weight: bold;
+        }
     }
 
     .price {
@@ -36,20 +97,115 @@
         font-size: 25px;
         color: $primary-color;
         font-weight: bold;
+
+        @include w600 {
+            font-size: 30px;
+        }
     }
 
     .description {
         grid-area: description;
-        font-size: 14px;
+        font-size: 10px;
         color: $dark;
+
+        @include w1400 {
+            font-size: 11px;
+            margin: 5px 10px;
+            text-align: center;
+        }
+        @include w1000 {
+            font-size: 14px;
+        }
+        @include w600 {
+            margin: 10px 30px;
+            text-align: center;
+        }
     }
 
     .select {
         grid-area: select;
+
+        .borderbutton {
+            border: 1px $green solid;
+            color: $green;
+
+            &:hover {
+                color: white;
+                background-color: $green;
+            }
+        }
+
+        .colorbutton {
+            border: 1px $green solid;
+            color: white;
+            background-color: $green;
+        }
     }
 
     .discard {
         grid-area: discard;
+
+        .colorbutton {
+            border: 1px $red solid;
+            color: white;
+            background-color: $red;
+        }
+
+        .borderbutton {
+            border: 1px $red solid;
+            color: $red;
+
+            &:hover {
+                color: white;
+                background-color: $red;
+            }
+        }
     }
-    
+
+    .borderbutton {
+        margin: 0 30px;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.3s;
+
+        @include w1400 {
+            padding: 5px 10px;
+        }
+
+        @include w1000 {
+            padding: 5px 30px;
+        }
+    }
+
+    .colorbutton {
+        margin: 0 30px;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.3s;
+
+        @include w1400 {
+            padding: 5px 10px;
+        }
+
+        @include w1000 {
+            margin: 0 30px;
+            padding: 5px 30px;
+        }
+    }    
 }
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid $primary-color;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

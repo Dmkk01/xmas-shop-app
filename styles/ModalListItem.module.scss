@@ -1,0 +1,50 @@
+@import "utilities";
+
+.item {
+    border-bottom: 1px $primary-color solid;
+    display: grid;
+    flex-direction: row;
+    margin: 30px 0;
+    color: $dark;
+    grid-template-rows: 1fr;
+    grid-template-columns: 81% 4% 15%;
+    grid-template-areas: "title amount price";
+    justify-items: stretch;
+
+    @include w1100() {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "title title"
+                             "  amount price";
+    }
+
+    @include w600() {
+        font-size: 17px;
+        border-bottom: none;
+    }
+                         
+}
+
+.title {
+    grid-area: title;
+
+    span {
+        font-weight: bold;
+    }
+}
+
+.amount {
+    grid-area: amount;
+
+    span {
+        font-weight: bold;
+    }
+}
+
+.price {
+    grid-area: price;
+
+    span {
+        font-weight: bold;
+    }
+}

@@ -7,30 +7,29 @@ export const MyContext = createContext([]);
 const initialState = [
     {
         id: 1,
-        name: "Kid 1",
+        name: "John",
         products: [],
     },
     {
         id: 2,
-        name: "Kid 2",
+        name: "Bob",
         products: [],
     },
     {
         id: 3,
-        name: "Kid 3",
+        name: "Oliver",
         products: [],
     },
     {
         id: 4,
-        name: "Kid 4",
+        name: "James",
         products: [],
     },
     {
         id: 5,
-        name: "Kid 5",
+        name: "Alexander",
         products: [],
     },
-
 ]
 
 export function MyProvider({ children }) {

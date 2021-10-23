@@ -1,5 +1,29 @@
 $primary-color: #00d2d3;
 $secondary-color: #54a0ff;
-$green: #ff6b6b;
-$red: #1dd1a1;
+$red: #ff6b6b;
+$green: #1dd1a1;
 $dark: #4E4E4E;
+
+@mixin w1400() {
+    @media (max-width: 1400px) {
+        @content
+    }
+};
+
+@mixin w1100() {
+    @media (max-width: 1100px) {
+        @content
+    }
+};
+
+@mixin w1000() {
+    @media (max-width: 1000px) {
+        @content
+    }
+};
+
+@mixin w600() {
+    @media (max-width: 600px) {
+        @content
+    }
+};

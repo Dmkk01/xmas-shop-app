@@ -1,3 +1,5 @@
+@import "utilities";
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -15,4 +17,40 @@
   justify-content: flex-start;
   align-items: center;
   font-size: 1.25rem;
+}
+
+.submit {
+  width: 20%;
+  margin: 0 auto;
+  border: 4px $primary-color solid;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: $dark;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $primary-color;
+    color: white;
+    cursor: pointer;
+  }
+
+  @include w600 {
+    width: 60%;
+  }
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid $primary-color;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

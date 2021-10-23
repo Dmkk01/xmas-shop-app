@@ -15,4 +15,9 @@
     color: $primary-color;
     text-decoration: none;
   }
+
+  @include w600 {
+    font-size: 3rem;
+    margin: 20px;
+  }
 }
