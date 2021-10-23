@@ -75,10 +75,17 @@
         border-top: 1px solid $red;
     }
 
+    .message {
+        text-align: start;
+        font-size: 25px;
+        color: $dark;
+    }
+
     .price {
         text-align: start;
         font-size: 25px;
         color: $dark;
+        margin: 40px 0;
         span {
             font-weight: bold;
         }

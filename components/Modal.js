@@ -69,12 +69,16 @@ const Modal = ({setModal}) => {
                 <p className={styles.approvedtext}>Approved</p>
                 <hr className={styles.approvedline}/>
                 {
+                    approved.length > 0 ?
                     approved.map(element => <ModalListItem key={element.id} product={element}/>)
+                    : <div className={styles.message}> No elements to display</div>
                 }
                 <p className={styles.declinedtext}>Discarded</p>
                 <hr className={styles.declinedline}/>
                 {
+                    discarded.length > 0 ?
                     discarded.map(element => <ModalListItem key={element.id} product={element}/>)
+                    : <div className={styles.message}> No elements to display</div>
                 }
                 <div className={styles.price}>
                     <span> Total Price: </span> {getPrice()}$
