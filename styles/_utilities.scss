@@ -1,8 +1,19 @@
 $primary-color: #00d2d3;
+$dark: var(--dark);;
+$light: var(--light);
+// $dark: #ffffff;
+// $light: #4E4E4E;
 $secondary-color: #54a0ff;
 $red: #ff6b6b;
 $green: #1dd1a1;
-$dark: #4E4E4E;
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 
 @mixin w1400() {
     @media (max-width: 1400px) {

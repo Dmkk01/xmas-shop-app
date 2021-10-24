@@ -5,7 +5,7 @@
     width: 27vw;
     height: 300px;
     border-radius: 20px;
-    box-shadow: 5px 5px 15px rgba($dark, .5);
+    box-shadow: 5px 5px 15px $dark;
     display: grid;
     padding: 15px 0;
     padding-right: 20px;
@@ -130,14 +130,14 @@
             color: $green;
 
             &:hover {
-                color: white;
+                color: $light;
                 background-color: $green;
             }
         }
 
         .colorbutton {
             border: 1px $green solid;
-            color: white;
+            color: $light;
             background-color: $green;
         }
     }
@@ -147,7 +147,7 @@
 
         .colorbutton {
             border: 1px $red solid;
-            color: white;
+            color: $light;
             background-color: $red;
         }
 
@@ -156,7 +156,7 @@
             color: $red;
 
             &:hover {
-                color: white;
+                color: $light;
                 background-color: $red;
             }
         }
