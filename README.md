@@ -27,3 +27,9 @@ npm run cypress
 
 ## Link
 https://xmas-shop.herokuapp.com/
+
+## Screenshots
+![Screenshot](screenshots/screen1.png)
+![Screenshot](screenshots/screen2.png)
+![Screenshot](screenshots/screen3.png)
+![Screenshot](screenshots/screen4.png)
