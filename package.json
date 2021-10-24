@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress": "cypress open",
+    "cypress:headless": "cypress run"
   },
   "dependencies": {
     "axios": "^0.23.0",
@@ -16,6 +18,8 @@
     "sass": "^1.43.3"
   },
   "devDependencies": {
+    "cypress": "^8.6.0",
+    "cypress-wait-until": "^1.7.1",
     "eslint": "8.0.1",
     "eslint-config-next": "11.1.2"
   }

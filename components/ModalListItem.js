@@ -11,7 +11,7 @@ import styles from '../styles/ModalListItem.module.scss'
         }
     }
     return (
-        <div className={styles.item}>
+        <div className={styles.item} data-cy="modal-item-list">
             <div className={styles.title}>
                 <span> Title: </span> {product.title}
             </div>

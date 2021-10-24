@@ -10,7 +10,7 @@ const Cart = ({index}) => {
   return (
     <div>  
         {state && (
-            <div className={styles.cart}> 
+            <div data-cy="cart-component" className={styles.cart}> 
                 <div className={styles.name}>
                     <h2> <span>{state[index].name}</span> would like these items:</h2> 
                 </div>
