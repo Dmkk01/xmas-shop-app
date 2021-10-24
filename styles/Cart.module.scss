@@ -1,7 +1,7 @@
 @import "utilities";
 
 .cart {
-    border: 2px black solid;
+    border: 2px $dark solid;
     min-width: 90vw;
     border-radius: 50px;
     display: flex;
@@ -10,6 +10,11 @@
     margin: 20px;
     padding: 20px;
     flex-direction: column;
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
 
     @include w600 {
         min-width: 95vw;
@@ -24,6 +29,7 @@
     .name {
         text-align: center;
         font-size: 20px;
+        color: $dark;
 
         span {
             color: $primary-color;

@@ -15,7 +15,7 @@
   
 .modalcontent {
     position: relative;
-    background-color: #fefefe;
+    background-color: $light;
     margin: auto;
     padding: 0;
     border: 1px solid #888;
@@ -45,7 +45,7 @@
 .modalheader {
     padding: 2px 16px;
     background-color: $primary-color;
-    color: white;
+    color: $light;
 }
   
 .modalbody {
@@ -105,7 +105,7 @@
 
         &:hover {
             background-color: $primary-color;
-            color: white;
+            color: $light;
         }
 
         @include w600() {

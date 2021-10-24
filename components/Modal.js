@@ -62,9 +62,9 @@ const Modal = ({setModal}) => {
         <div className={styles.modal}>
             <div className={styles.modalcontent}>
             <div className={styles.modalheader}>
-                <span className={styles.close} onClick={() => setModal(false)}>&times;</span>
+                <span className={styles.close} onClick={() => setModal(false)} data-cy="modal-close">&times;</span>
             </div>
-            <div className={styles.modalbody}>
+            <div data-cy="modal-component" className={styles.modalbody}>
                 <p>Here is your final list: </p>
                 <p className={styles.approvedtext}>Approved</p>
                 <hr className={styles.approvedline}/>
@@ -80,10 +80,10 @@ const Modal = ({setModal}) => {
                     discarded.map(element => <ModalListItem key={element.id} product={element}/>)
                     : <div className={styles.message}> No elements to display</div>
                 }
-                <div className={styles.price}>
+                <div className={styles.price} data-cy="total-price">
                     <span> Total Price: </span> {getPrice()}$
                 </div>
-                <div className={styles.submit} onClick={() => submitProducts()}>
+                <div className={styles.submit} onClick={() => submitProducts()} data-cy="final-submit">
                     Submit
                 </div>
             </div>

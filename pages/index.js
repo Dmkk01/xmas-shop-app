@@ -23,15 +23,17 @@ export default function Home() {
         state.length > 0 ? 
         <>
         {modal && <Modal modal={modal} setModal={setModal}/>}
-        <div className={styles.submit} onClick={() => setModal(true)}> Submit</div>
+        <div data-cy="submit-button" className={styles.submit} onClick={() => setModal(true)}> Submit</div>
+        <div>
         {
           state.map((element, index) => (
             <Cart index={index} key={element.id}/>
           ))
         }
+        </div>
         </>
         : 
-        <div className={styles.loader}></div>
+        <div className={styles.loader} data-cy="data-loader"></div>
       }
     </div>
   )

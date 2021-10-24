@@ -5,6 +5,7 @@
   line-height: 1.15;
   font-size: 4rem;
   text-align: center;
+  color: $dark;
   a {
     &:hover, &:focus, &:active {
       text-decoration: underline;
@@ -19,5 +20,6 @@
   @include w600 {
     font-size: 3rem;
     margin: 20px;
+    margin-top: 50px;
   }
 }

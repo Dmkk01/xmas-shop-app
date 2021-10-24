@@ -1,5 +1,23 @@
 @import "utilities";
 
+.mode {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px $dark solid;
+  border-radius: 10px;
+  color: $dark;
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $dark;
+    color: $light;
+  }
+}
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -32,7 +50,7 @@
 
   &:hover {
     background-color: $primary-color;
-    color: white;
+    color: $light;
     cursor: pointer;
   }
 
